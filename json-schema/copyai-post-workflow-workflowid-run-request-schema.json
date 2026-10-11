@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/copyai/main/json-schema/copyai-post-workflow-workflowid-run-request-schema.json",
+  "title": "PostWorkflowWorkflowidRunRequest",
+  "x-generated": "2026-10-11",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/PostWorkflowWorkflowidRunRequest",
+  "type": "object",
+  "properties": {
+    "startVariables": {
+      "type": "object",
+      "description": "Starting values for the run"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata"
+    }
+  }
+}

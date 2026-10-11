@@ -1,0 +1,59 @@
+generated: '2026-10-11'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/copyai-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.copy.ai, www.copy.ai, support.copy.ai, app.copy.ai; verdict absent.
+  Candidate tools below are derived from the 9 operation(s) in the provider's own OpenAPI (9 listed); they describe what a server WOULD expose,
+  not one that exists.
+tools:
+- name: get_api_workflow
+  operationId: get_api_workflow
+  method: GET
+  path: /api/workflow
+  description: Get all workflow runs
+- name: post_api_apiid
+  operationId: post_api_apiid
+  method: POST
+  path: /api/{apiid}
+  description: Register a webhook
+- name: get_webhook
+  operationId: get_webhook
+  method: GET
+  path: /webhook
+  description: Get all webhooks
+- name: post_webhook
+  operationId: post_webhook
+  method: POST
+  path: /webhook
+  description: Register a webhook
+- name: delete_webhook_webhook_id
+  operationId: delete_webhook_webhookId
+  method: DELETE
+  path: /webhook/{webhookId}
+  description: Remove a webhook
+- name: get_webhook_webhook_id
+  operationId: get_webhook_webhookId
+  method: GET
+  path: /webhook/{webhookId}
+  description: Get a specific webhook
+- name: get_workflow_workflow_id_run
+  operationId: get_workflow_workflowId_run
+  method: GET
+  path: /workflow/{workflowId}/run
+  description: Get all workflow runs
+- name: post_workflow_workflow_id_run
+  operationId: post_workflow_workflowId_run
+  method: POST
+  path: /workflow/{workflowId}/run
+  description: Start a workflow run
+- name: get_workflow_workflow_id_run_run_id
+  operationId: get_workflow_workflowId_run_runId
+  method: GET
+  path: /workflow/{workflowId}/run/{runId}
+  description: Get a specific workflow run

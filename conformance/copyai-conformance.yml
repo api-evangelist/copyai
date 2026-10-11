@@ -1,0 +1,26 @@
+generated: '2026-10-11'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.copy.ai/blog/how-automated-workflows-and-soc-2-compliance-protect-your-data
+sources:
+- https://www.copy.ai/blog/how-automated-workflows-and-soc-2-compliance-protect-your-data
+- https://support.fullcast.com/docs/compliance.md
+- https://support.fullcast.com/docs/general.md
+- https://support.fullcast.com/docs/fullcast-security-enhancements.md
+standards:
+- id: soc2
+  conforms: true
+  evidence: How Automated Workflows and SOC 2 Compliance Protect Your Data
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: no securitySchemes declared
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+docs: https://www.copy.ai/blog/how-automated-workflows-and-soc-2-compliance-protect-your-data

@@ -1,0 +1,35 @@
+generated: '2026-10-11'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.copy.ai/prices
+sources:
+- https://www.copy.ai/prices
+- https://support.fullcast.com/docs/the-plans-screen.md
+- https://support.fullcast.com/docs/manage-plans.md
+- https://support.fullcast.com/docs/best-practices-for-routing-policies-in-multiple-exporting-plans.md
+name: Copy.ai pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Chat
+  price_text: $29/mo
+  price: 29
+  description: For small teams starting to drive real business value with AI
+- name: Growth
+  price_text: $24/mo
+  price: 24
+  description: For businesses harnessing AI for exponential growth
+- name: Expansion
+  price_text: $2,000/mo
+  price: 2000
+  description: For enterprises expanding their AI Automations
+- name: Scale
+  price_text: $3,000/mo
+  price: 3000
+  description: For organizations ready to deploy Generative AI at scale
+- name: Enterprise
+  price_text: Contact Sales
+  description: 'For orgs ready to power their GTM with AI. All Advanced features, plus: Get a custom demo, Guided Jumpstart Implementation, API
+    Access & Bulk Workflow Runs, 20+ Tech Integrations & API Access, Unlimited Customizable Workflows, Designated Account & Support Team, Enterprise
+    Grade Security Protocols'
+docs: https://www.copy.ai/prices

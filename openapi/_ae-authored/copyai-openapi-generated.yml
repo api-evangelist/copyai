@@ -1,0 +1,303 @@
+openapi: 3.1.0
+info:
+  title: Copy.ai API
+  version: '2026-10-11'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-11: 9 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Copy.ai has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 9
+    pages-with-code: 0
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-11'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://support.fullcast.com/api-docs/apidocs
+servers:
+- url: https://api.copy.ai
+paths:
+  /api/workflow:
+    get:
+      operationId: get_api_workflow
+      tags:
+      - Api
+      summary: Get all workflow runs
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/{apiid}:
+    post:
+      operationId: post_api_apiid
+      tags:
+      - Api
+      summary: Register a webhook
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiApiidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiApiidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at apiId
+  /webhook:
+    get:
+      operationId: get_webhook
+      tags:
+      - Webhook
+      summary: Get all webhooks
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_webhook
+      tags:
+      - Webhook
+      summary: Register a webhook
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostWebhookRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostWebhookResponse'
+      x-evidence:
+        kind: documentation
+  /webhook/{webhookId}:
+    delete:
+      operationId: delete_webhook_webhookId
+      tags:
+      - Webhook
+      summary: Remove a webhook
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: webhookId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_webhook_webhookId
+      tags:
+      - Webhook
+      summary: Get a specific webhook
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: webhookId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /workflow/{workflowId}/run:
+    get:
+      operationId: get_workflow_workflowId_run
+      tags:
+      - Workflow
+      summary: Get all workflow runs
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: workflowId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_workflow_workflowId_run
+      tags:
+      - Workflow
+      summary: Start a workflow run
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: workflowId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostWorkflowWorkflowidRunRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostWorkflowWorkflowidRunResponse'
+      x-evidence:
+        kind: documentation
+  /workflow/{workflowId}/run/{runId}:
+    get:
+      operationId: get_workflow_workflowId_run_runId
+      tags:
+      - Workflow
+      summary: Get a specific workflow run
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: workflowId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: runId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetWorkflowWorkflowidRunRunidResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostApiApiidRequest:
+      type: object
+      properties:
+        url:
+          type: string
+        eventType:
+          type: string
+        workflowId:
+          type: string
+      required:
+      - url
+      - eventType
+    PostApiApiidResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: object
+        data.id:
+          type: string
+        data.url:
+          type: string
+        data.eventType:
+          type: string
+        data.workflowId:
+          type: string
+    PostWebhookRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          description: Webhook URL
+        eventType:
+          type: string
+          description: The event type you want to be notified about
+        workflowId:
+          type: string
+          description: Optional workflow ID
+      required:
+      - url
+      - eventType
+    PostWebhookResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: object
+          description: Webhook details
+        data.id:
+          type: string
+        data.url:
+          type: string
+        data.eventType:
+          type: string
+        data.workflowId:
+          type: string
+    PostWorkflowWorkflowidRunRequest:
+      type: object
+      properties:
+        startVariables:
+          type: object
+          description: Starting values for the run
+        metadata:
+          type: object
+          description: Optional metadata
+    PostWorkflowWorkflowidRunResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: object
+        data.id:
+          type: string
+    GetWorkflowWorkflowidRunRunidResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: object
+        data.id:
+          type: string
+        data.input:
+          type: object
+        data.status:
+          type: string
+        data.output:
+          type: object
+        data.createdAt:
+          type: string
+tags:
+- name: Api
+- name: Webhook
+- name: Workflow

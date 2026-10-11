@@ -1,23 +1,152 @@
 aid: copyai
+
 name: Copy.ai
-description: 'Copy.ai is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/628288c5cd3e8411b90a36a4/67111b6951504ebf1467be96_6708d064807b31c351b41284_share-og-image%20(1)-min.png
+
+description: Copy.ai provides AI‑powered content generation, workflow automation, and marketing tools for businesses. Its platform offers copy
+  generation, AI‑image captioning, workflow templates, and integrations that help teams create sales, marketing, and operational content at scale.
+  The service includes a suite of AI agents, customizable brand voice, and data‑driven insights, positioning it as a comprehensive solution for
+  modern GTM teams.
+
 url: https://raw.githubusercontent.com/api-evangelist/copyai/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-11 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-10'
+
 modified: '2026-10-10'
+
 tags:
+- AI
+- Marketing
+- Content Generation
+- Automation
+- SaaS
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/copyai-plans-pricing.yml
+- type: Spectral
+  url: rules/copyai-rules.yml
+- type: JSONLD
+  url: json-ld/copyai-context.jsonld
+- type: Vocabulary
+  url: vocabulary/copyai-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/copyai-webhooks.yml
+- type: DataModel
+  url: data-model/copyai-data-model.yml
+- type: ChangeLog
+  url: changelog/copyai-changelog.yml
+- type: Compliance
+  url: https://www.copy.ai/security
+- type: Conformance
+  url: conformance/copyai-conformance.yml
+- type: LLMsTxt
+  url: llms/copyai-llms.txt
+- type: SecurityTxt
+  url: well-known/copyai-status-security.txt
+- type: WellKnown
+  url: well-known/copyai-well-known.yml
+- type: Hosts
+  url: hosts/copyai-hosts.yml
+- type: Vendors
+  url: vendors/copyai-vendors.yml
+- type: TermsOfService
+  url: https://www.copy.ai/terms-of-service
+- type: StatusPage
+  url: https://status.copy.ai/
+- type: Security
+  url: https://www.copy.ai/security
+- type: PrivacyPolicy
+  url: https://www.copy.ai/privacy-notice
+- type: Newsroom
+  url: https://www.copy.ai/press
+- type: Login
+  url: https://app.copy.ai/login
+- type: ChangeLog
+  url: https://www.copy.ai/changelog
+- type: GettingStarted
+  url: https://support.fullcast.com/docs/educational-resources
+- type: TrustCenter
+  url: security/copyai-trust-center.yml
+- type: DomainSecurity
+  url: security/copyai-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/copyai_stock/
+  url: https://www.copy.ai
+- type: Documentation
+  url: https://www.copy.ai/platform/how-it-works
+- type: APIReference
+  url: https://www.copy.ai/api
+- type: Pricing
+  url: https://www.copy.ai/prices
+- type: Blog
+  url: https://www.copy.ai/blog
+- type: Support
+  url: https://support.copy.ai/en
+- type: Contact
+  url: https://www.copy.ai/contact-us
+
+apis:
+- name: Copy.ai API
+  description: Copy.ai API provides endpoints for AI‑generated content creation and related services.
+  humanURL: https://www.copy.ai/api
+  baseURL: null
+  aid: copyai:copy-ai-api
+- aid: copyai:copyai-api
+  name: Copy.ai API
+  description: 'Copy.ai API as documented publicly: 9 operations. Contract generated from the documentation by API Evangelist (2026-10-11); not
+
+    the provider''s own document.'
+  humanURL: https://support.fullcast.com/api-docs/apidocs
+  baseURL: https://api.copy.ai
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/copyai-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/copyai-post-webhook-request-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-webhook-response-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-get-workflow-workflowid-run-runid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-api-apiid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-workflow-workflowid-run-request-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-api-apiid-request-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-10-11'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://www.copy.ai
+    status: 200
+  - url: https://forgeglobal.com/copyai_stock/
+    status: 403
+x-enrichment:
+  date: '2026-10-11'
+  status: enriched
+  artifacts_added: 25
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

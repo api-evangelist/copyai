@@ -1,0 +1,86 @@
+generated: '2026-10-11'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://support.fullcast.com/docs/release-notes.md
+sources:
+- https://support.fullcast.com/docs/release-notes.md
+- https://support.fullcast.com/docs/managed-package-release-notes-1.md
+- https://support.fullcast.com/docs/managed-package-release-notes-v2-20x.md
+- https://support.fullcast.com/docs/managed-package-release-notes-v2-19x.md
+entries:
+- breaking: false
+  highlights:
+  - New **A GTM Team custom object for assignment data** · *Salesforce Integration*
+  - The package installs a **GTM Team** custom object related to the GTM object, carrying the assignment start and end dates, the assigned user,
+    the assignment type, the role, an inherited flag, and an external ID so repeat upserts update a record rather than duplicate it.
+  - Upgrading an existing org adds the object and leaves your Account Team behavior unchanged.
+  date: '2026-09-18'
+- breaking: false
+  highlights:
+  - Enhancement **Tag fields on a related Policy Status record from routing** · *Routing*
+  - In **Default users & record tagging**, the **Field** list now offers fields from the related Policy Status object as well as the primary routed
+    object.
+  - When the rule runs, it writes your chosen value to that field on the matching Policy Status record.
+  date: '2026-09-18'
+- breaking: false
+  highlights:
+  - Improvement **Routing invalid queue ID error** · *Routing*
+  - Leads were not being assigned due to an **Invalid Queue ID** error when routing to a queue. The system now correctly recognizes configured
+    queue IDs and routes leads as intended.
+  date: '2026-03-02'
+- breaking: false
+  highlights:
+  - Enhancement **Holdout policy custom object and schedule flows** · *Routing*
+  - The Salesforce Lightning Web components now provides a visual indicator of holdouts and their expiration dates.
+  - You can use Salesforce schedule flows to clean up expired holdouts which replaces the scheduler.
+  date: '2025-11-17'
+- breaking: false
+  highlights:
+  - Improvement **Wildcard operator not grabbing all policies** · *Routing*
+  - The wildcard operator (*) for the input value, `InputVal3`, was not grabbing the policies correctly for all records in a transaction that
+    start with the same tag operator in the bulk execution.
+  date: '2025-09-10'
+- breaking: false
+  highlights:
+  - Improvement BMA **fields for lead routing not updating** · *Routing*
+  - The input value, `InputVal3`, was not updating the BMA fields on lead routing correctly.
+  date: '2025-08-22'
+- breaking: false
+  highlights:
+  - Improvement **Queueable job reduction** · *Salesforce Integration*
+  - To reduce the number of queueable jobs, the GTM trigger handling action during the territory routing and round robin are being skipped.
+  date: '2025-07-02'
+- breaking: false
+  highlights:
+  - Improvement **API version update** · *Salesforce Integration*
+  - The API version for Apex classes, Apex triggers, and visual force pages have been upgraded to API 60.0.
+  date: '2025-07-02'
+- breaking: false
+  highlights:
+  - Enhancement **Concurrent API request limit updates** · *Salesforce Integration*
+  - Users were experiencing concurrent API request limit issues within Salesforce due to the average runtime of the Fullcast Managed Package taking
+    too long.
+  - A custom metadata, **Execute Territory Routing ASync**, was added that allows you to execute the **Territory Routing Response** process asynchronously
+    to help mitigate the request limit issues.
+  date: '2025-06-16'
+- breaking: false
+  highlights:
+  - Improvement **GTM Leaf Information failing** · *Salesforce Integration*
+  - The GTM Leaf Information was failing due to too many jobs running at the same time.
+  date: '2025-06-16'
+- breaking: false
+  highlights:
+  - '**Concurrent API request limit updates**'
+  - Users were experiencing concurrent API request limit issues within Salesforce due to the average runtime of the Fullcast Managed Package taking
+    too long. This was partially fixed by converting API requests to be asynchronous to prevent too many from sending at the same time.
+  date: '2025-05-28'
+- breaking: false
+  highlights:
+  - '**Account Hierarchy restructure**'
+  - When parent accounts were removed from the CRM it caused the children accounts to disconnect from the account hierarchy and you had to manually
+    add a new parent. Now when a parent account is removed, it triggers the children accounts to automatically find and connect to the parent
+    one level higher than the one that was removed.
+  date: '2025-05-28'
+scheme: Managed Package <major>.<minor><patch>
+current_version: Managed Package 2.208
+docs: https://support.fullcast.com/docs/release-notes.md

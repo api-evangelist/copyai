@@ -1,0 +1,45 @@
+generated: '2026-10-11'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/copyai-openapi-generated.yml
+vocabulary:
+  name: Copy.ai Domain Vocabulary
+  description: 'Terms declared by Copy.ai''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-11'
+  terms:
+  - term: PostApiApiidRequest
+    definition: 'Object declared by the contract with fields: url, eventType, workflowId.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/PostApiApiidRequest
+  - term: PostApiApiidResponse
+    definition: 'Object declared by the contract with fields: status, data, data.id, data.url, data.eventType, data.workflowId.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/PostApiApiidResponse
+  - term: PostWebhookRequest
+    definition: 'Object declared by the contract with fields: url, eventType, workflowId.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/PostWebhookRequest
+  - term: PostWebhookResponse
+    definition: 'Object declared by the contract with fields: status, data, data.id, data.url, data.eventType, data.workflowId.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/PostWebhookResponse
+  - term: PostWorkflowWorkflowidRunRequest
+    definition: 'Object declared by the contract with fields: startVariables, metadata.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/PostWorkflowWorkflowidRunRequest
+  - term: PostWorkflowWorkflowidRunResponse
+    definition: 'Object declared by the contract with fields: status, data, data.id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/PostWorkflowWorkflowidRunResponse
+  - term: GetWorkflowWorkflowidRunRunidResponse
+    definition: 'Object declared by the contract with fields: status, data, data.id, data.input, data.status, data.output, data.createdAt.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/GetWorkflowWorkflowidRunRunidResponse

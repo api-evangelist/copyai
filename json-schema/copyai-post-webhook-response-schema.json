@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/copyai/main/json-schema/copyai-post-webhook-response-schema.json",
+  "title": "PostWebhookResponse",
+  "x-generated": "2026-10-11",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/PostWebhookResponse",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "description": "Webhook details"
+    },
+    "data.id": {
+      "type": "string"
+    },
+    "data.url": {
+      "type": "string"
+    },
+    "data.eventType": {
+      "type": "string"
+    },
+    "data.workflowId": {
+      "type": "string"
+    }
+  }
+}

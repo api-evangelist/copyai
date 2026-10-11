@@ -1,0 +1,22 @@
+generated: '2026-10-11'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://support.fullcast.com/apidocs/register-webhook-2.md
+sources:
+- https://support.fullcast.com/apidocs/register-webhook-2.md
+- https://support.fullcast.com/apidocs/get-webhook-2.md
+- https://support.fullcast.com/apidocs/get-all-webhooks-2.md
+- https://support.fullcast.com/apidocs/remove-webhook-2.md
+description: Copy.ai webhook events
+events:
+- event: workflowRun.started
+  description: Sends an event anytime a workflow run is started.
+- event: workflowRun.completed
+  description: Sends an event anytime a workflow run is completed.
+- event: workflowRun.failed
+  description: Sends an event anytime a workflow run fails.
+- event: workflowCreditLimit.reached
+  description: Sends an event when your workspace reaches the credit limit.
+delivery: {}
+note: The documentation does not specify how webhook deliveries are secured (e.g., signature header) or how retries are handled.
+docs: https://support.fullcast.com/apidocs/register-webhook-2.md

@@ -1,0 +1,12 @@
+generated: '2026-10-11'
+method: searched
+probe: true
+source: https://www.copy.ai/security
+url: https://www.copy.ai/security
+certifications:
+- SOC 2
+evidence:
+- source: https://www.copy.ai/security
+  keywords:
+  - soc 2
+  - trust center

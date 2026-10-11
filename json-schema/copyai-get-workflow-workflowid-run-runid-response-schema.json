@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/copyai/main/json-schema/copyai-get-workflow-workflowid-run-runid-response-schema.json",
+  "title": "GetWorkflowWorkflowidRunRunidResponse",
+  "x-generated": "2026-10-11",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/copyai-openapi-generated.yml#/components/schemas/GetWorkflowWorkflowidRunRunidResponse",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object"
+    },
+    "data.id": {
+      "type": "string"
+    },
+    "data.input": {
+      "type": "object"
+    },
+    "data.status": {
+      "type": "string"
+    },
+    "data.output": {
+      "type": "object"
+    },
+    "data.createdAt": {
+      "type": "string"
+    }
+  }
+}
