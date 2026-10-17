@@ -1,0 +1,124 @@
+openapi: 3.2.0
+info:
+  title: Copy.ai Webhook API
+  version: '2026-10-11'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-11: 9 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Copy.ai has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 9
+    pages-with-code: 0
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-11'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://support.fullcast.com/api-docs/apidocs
+servers:
+- url: https://api.copy.ai
+tags:
+- name: Webhook
+paths:
+  /webhook:
+    get:
+      operationId: get_webhook
+      tags:
+      - Webhook
+      summary: Get all webhooks
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_webhook
+      tags:
+      - Webhook
+      summary: Register a webhook
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostWebhookRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostWebhookResponse'
+      x-evidence:
+        kind: documentation
+  /webhook/{webhookId}:
+    delete:
+      operationId: delete_webhook_webhookId
+      tags:
+      - Webhook
+      summary: Remove a webhook
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: webhookId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_webhook_webhookId
+      tags:
+      - Webhook
+      summary: Get a specific webhook
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: webhookId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostWebhookRequest:
+      type: object
+      properties:
+        url:
+          type: string
+          description: Webhook URL
+        eventType:
+          type: string
+          description: The event type you want to be notified about
+        workflowId:
+          type: string
+          description: Optional workflow ID
+      required:
+      - url
+      - eventType
+    PostWebhookResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: object
+          description: Webhook details
+        data.id:
+          type: string
+        data.url:
+          type: string
+        data.eventType:
+          type: string
+        data.workflowId:
+          type: string

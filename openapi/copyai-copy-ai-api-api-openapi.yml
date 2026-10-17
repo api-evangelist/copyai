@@ -1,0 +1,81 @@
+openapi: 3.2.0
+info:
+  title: Copy.ai API
+  version: '2026-10-11'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-11: 9 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Copy.ai has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 9
+    pages-with-code: 0
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-11'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://support.fullcast.com/api-docs/apidocs
+servers:
+- url: https://api.copy.ai
+tags:
+- name: Copy.ai API
+paths:
+  /api/{apiid}:
+    post:
+      operationId: post_api_apiid
+      tags:
+      - Copy.ai API
+      summary: Register a webhook
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiApiidRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiApiidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at apiId
+components:
+  schemas:
+    PostApiApiidResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: object
+        data.id:
+          type: string
+        data.url:
+          type: string
+        data.eventType:
+          type: string
+        data.workflowId:
+          type: string
+    PostApiApiidRequest:
+      type: object
+      properties:
+        url:
+          type: string
+        eventType:
+          type: string
+        workflowId:
+          type: string
+      required:
+      - url
+      - eventType

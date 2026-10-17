@@ -1,0 +1,23 @@
+{
+  "provider": "copyai",
+  "sources": [
+    "_ae-authored/copyai-openapi-generated.yml"
+  ],
+  "outputs": [
+    "copyai-copy-ai-api-api-openapi.yml",
+    "copyai-webhook-api-openapi.yml",
+    "copyai-workflow-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "copyai-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "copyai-openapi-generated.yml: tagged paths GET /api/workflow -> Workflow",
+    "copyai-openapi-generated.yml: tagged paths POST /api/{apiid} -> Copy.ai API",
+    "copyai-openapi-generated.yml: declared missing tag: Copy.ai API",
+    "apis.yml register: written (+3 apis, 4 total)"
+  ],
+  "skipped": []
+}

@@ -1,0 +1,144 @@
+openapi: 3.2.0
+info:
+  title: Copy.ai Workflow API
+  version: '2026-10-11'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-11: 9 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Copy.ai has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 9
+    pages-with-code: 0
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-11'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://support.fullcast.com/api-docs/apidocs
+servers:
+- url: https://api.copy.ai
+tags:
+- name: Workflow
+paths:
+  /api/workflow:
+    get:
+      operationId: get_api_workflow
+      tags:
+      - Workflow
+      summary: Get all workflow runs
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /workflow/{workflowId}/run:
+    get:
+      operationId: get_workflow_workflowId_run
+      tags:
+      - Workflow
+      summary: Get all workflow runs
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: workflowId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_workflow_workflowId_run
+      tags:
+      - Workflow
+      summary: Start a workflow run
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: workflowId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostWorkflowWorkflowidRunRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostWorkflowWorkflowidRunResponse'
+      x-evidence:
+        kind: documentation
+  /workflow/{workflowId}/run/{runId}:
+    get:
+      operationId: get_workflow_workflowId_run_runId
+      tags:
+      - Workflow
+      summary: Get a specific workflow run
+      x-source: https://support.fullcast.com/api-docs/apidocs
+      parameters:
+      - name: workflowId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: runId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetWorkflowWorkflowidRunRunidResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostWorkflowWorkflowidRunRequest:
+      type: object
+      properties:
+        startVariables:
+          type: object
+          description: Starting values for the run
+        metadata:
+          type: object
+          description: Optional metadata
+    GetWorkflowWorkflowidRunRunidResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: object
+        data.id:
+          type: string
+        data.input:
+          type: object
+        data.status:
+          type: string
+        data.output:
+          type: object
+        data.createdAt:
+          type: string
+    PostWorkflowWorkflowidRunResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        data:
+          type: object
+        data.id:
+          type: string

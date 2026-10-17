@@ -108,17 +108,16 @@ apis:
   humanURL: https://www.copy.ai/api
   baseURL: null
   aid: copyai:copy-ai-api
-- aid: copyai:copyai-api
-  name: Copy.ai API
-  description: 'Copy.ai API as documented publicly: 9 operations. Contract generated from the documentation by API Evangelist (2026-10-11); not
-
-    the provider''s own document.'
-  humanURL: https://support.fullcast.com/api-docs/apidocs
+- aid: copyai:copyai-copy-ai-api-api
+  name: Copy.ai Copy.ai API
+  description: The Copy.ai API API from Copy.ai — 1 operation(s) for copy.ai api.
+  humanURL: https://www.copy.ai/api
   baseURL: https://api.copy.ai
+  tags:
+  - Copy.ai API
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/copyai-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/copyai-copy-ai-api-api-openapi.yml
   - type: JSONSchema
     url: json-schema/copyai-post-webhook-request-schema.json
   - type: JSONSchema
@@ -131,7 +130,50 @@ apis:
     url: json-schema/copyai-post-workflow-workflowid-run-request-schema.json
   - type: JSONSchema
     url: json-schema/copyai-post-api-apiid-request-schema.json
-
+- aid: copyai:copyai-webhook-api
+  name: Copy.ai Webhook API
+  description: The Webhook API from Copy.ai — 2 operation(s) for webhook.
+  humanURL: https://www.copy.ai/api
+  baseURL: https://api.copy.ai
+  tags:
+  - Webhook
+  properties:
+  - type: OpenAPI
+    url: openapi/copyai-webhook-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/copyai-post-webhook-request-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-webhook-response-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-get-workflow-workflowid-run-runid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-api-apiid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-workflow-workflowid-run-request-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-api-apiid-request-schema.json
+- aid: copyai:copyai-workflow-api
+  name: Copy.ai Workflow API
+  description: The Workflow API from Copy.ai — 3 operation(s) for workflow.
+  humanURL: https://www.copy.ai/api
+  baseURL: https://api.copy.ai
+  tags:
+  - Workflow
+  properties:
+  - type: OpenAPI
+    url: openapi/copyai-workflow-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/copyai-post-webhook-request-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-webhook-response-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-get-workflow-workflowid-run-runid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-api-apiid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-workflow-workflowid-run-request-schema.json
+  - type: JSONSchema
+    url: json-schema/copyai-post-api-apiid-request-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec
