@@ -64,5 +64,136 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Copy.ai is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/copyai_stock/
+Copy.ai provides AI‑powered content generation, workflow automation, and marketing tools for businesses. Its platform offers copy generation, AI‑image captioning, workflow templates, and integrations that help teams create sales, marketing, and operational content at scale. The service includes a suite of AI agents, customizable brand voice, and data‑driven insights, positioning it as a comprehensive solution for modern GTM teams.
+
+**Areas:** Artificial Intelligence · Marketing · Content Generation · Automation · Software-as-a-Service · Company
+
+## Copy.ai on APIs.io
+
+Everything profiled for Copy.ai is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/copyai/](https://apis.io/providers/copyai/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [Copy.ai API](https://apis.io/apis/copyai/copy-ai-api/) — Copy.ai API provides endpoints for AI‑generated content creation and related services.
+- [Copy.ai Copy.ai API](https://apis.io/apis/copyai/copyai-copy-ai-api-api/) — The Copy.ai API API from Copy.ai — 1 operation(s) for copy.ai api.
+- [Copy.ai Webhook API](https://apis.io/apis/copyai/copyai-webhook-api/) — The Webhook API from Copy.ai — 2 operation(s) for webhook.
+- [Copy.ai Workflow API](https://apis.io/apis/copyai/copyai-workflow-api/) — The Workflow API from Copy.ai — 3 operation(s) for workflow.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Copyai Webhooks](https://apis.io/asyncapis/copyai/copyai-webhooks/)
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetWorkflowWorkflowidRunRunidResponse](https://apis.io/schemas/copyai/copyai-get-workflow-workflowid-run-runid-response/)
+- [PostApiApiidRequest](https://apis.io/schemas/copyai/copyai-post-api-apiid-request/)
+- [PostApiApiidResponse](https://apis.io/schemas/copyai/copyai-post-api-apiid-response/)
+- [PostWebhookRequest](https://apis.io/schemas/copyai/copyai-post-webhook-request/)
+- [PostWebhookResponse](https://apis.io/schemas/copyai/copyai-post-webhook-response/)
+- [PostWorkflowWorkflowidRunRequest](https://apis.io/schemas/copyai/copyai-post-workflow-workflowid-run-request/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Copyai Context](https://apis.io/jsonld/copyai/copyai-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Copy.ai API Rules](https://apis.io/rules/copyai/copyai-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Copyai Domain Security](https://apis.io/security/copyai/copyai-domain-security/)
+- [Copyai Trust Center](https://apis.io/security/copyai/copyai-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Copyai Plans Pricing](https://apis.io/plans/copyai/copyai-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.copy.ai)
+- [Documentation](https://www.copy.ai/platform/how-it-works)
+- [Getting started](https://support.fullcast.com/docs/educational-resources)
+- [API reference](https://www.copy.ai/api)
+- [Pricing](https://www.copy.ai/prices)
+- [Support](https://support.copy.ai/en)
+- [Changelog](https://www.copy.ai/changelog)
+- [Blog](https://www.copy.ai/blog)
+- [Security](https://www.copy.ai/security)
+- [Compliance](https://www.copy.ai/security)
+- [Terms of service](https://www.copy.ai/terms-of-service)
+- [Privacy policy](https://www.copy.ai/privacy-notice)
+- [Status](https://status.copy.ai/)
+
+## API Evangelist rating
+
+**Kin Score 51.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 32.2 |
+| Contract governance | 35.6 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 92.1 |
+
+**Agent readiness 16.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | — |
+
+**Regulatory alignment 21.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/copyai/](https://apis.io/providers/copyai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Copy.ai: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/copyai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
